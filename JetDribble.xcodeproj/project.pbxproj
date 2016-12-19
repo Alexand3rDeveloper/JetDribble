@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E64500D1E03E89C00EC52E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64500C1E03E89C00EC52E8 /* AppDelegate.swift */; };
+		5E64500F1E03E89C00EC52E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64500E1E03E89C00EC52E8 /* ViewController.swift */; };
+		5E6450121E03E89C00EC52E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6450101E03E89C00EC52E8 /* Main.storyboard */; };
+		5E6450151E03E89C00EC52E8 /* JetDribble.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E6450131E03E89C00EC52E8 /* JetDribble.xcdatamodeld */; };
+		5E6450171E03E89C00EC52E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6450161E03E89C00EC52E8 /* Assets.xcassets */; };
+		5E64501A1E03E89C00EC52E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6450181E03E89C00EC52E8 /* LaunchScreen.storyboard */; };
+		5E6450251E03E89C00EC52E8 /* JetDribbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6450241E03E89C00EC52E8 /* JetDribbleTests.swift */; };
+		A60720C738130AA593A722E1 /* Pods_JetDribble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B17C4FE68E9BB6392570E2 /* Pods_JetDribble.framework */; };
+		F0F2B80EEC6D6A5028400C81 /* Pods_JetDribbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF57C2CECECBC95952DE3115 /* Pods_JetDribbleTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E6450211E03E89C00EC52E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6450011E03E89B00EC52E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E6450081E03E89B00EC52E8;
+			remoteInfo = JetDribble;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		044CA6FB931CE79D423F33FC /* Pods-JetDribbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDribbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetDribbleTests/Pods-JetDribbleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E6450091E03E89B00EC52E8 /* JetDribble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetDribble.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E64500C1E03E89C00EC52E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E64500E1E03E89C00EC52E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E6450111E03E89C00EC52E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E6450141E03E89C00EC52E8 /* JetDribble.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JetDribble.xcdatamodel; sourceTree = "<group>"; };
+		5E6450161E03E89C00EC52E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E6450191E03E89C00EC52E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E64501B1E03E89C00EC52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E6450201E03E89C00EC52E8 /* JetDribbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetDribbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E6450241E03E89C00EC52E8 /* JetDribbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetDribbleTests.swift; sourceTree = "<group>"; };
+		5E6450261E03E89C00EC52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60A0A458D4EC7CF976A20C58 /* Pods-JetDribbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDribbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetDribbleTests/Pods-JetDribbleTests.release.xcconfig"; sourceTree = "<group>"; };
+		AE0DC4CCBC613B2003EF2C71 /* Pods-JetDribble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDribble.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetDribble/Pods-JetDribble.release.xcconfig"; sourceTree = "<group>"; };
+		D35350A0207CCCE8FB608D9F /* Pods-JetDribble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDribble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetDribble/Pods-JetDribble.debug.xcconfig"; sourceTree = "<group>"; };
+		EF57C2CECECBC95952DE3115 /* Pods_JetDribbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetDribbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3B17C4FE68E9BB6392570E2 /* Pods_JetDribble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetDribble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E6450061E03E89B00EC52E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60720C738130AA593A722E1 /* Pods_JetDribble.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E64501D1E03E89C00EC52E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0F2B80EEC6D6A5028400C81 /* Pods_JetDribbleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41D2067C9710840D3D223F41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3B17C4FE68E9BB6392570E2 /* Pods_JetDribble.framework */,
+				EF57C2CECECBC95952DE3115 /* Pods_JetDribbleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E6450001E03E89B00EC52E8 = {
+			isa = PBXGroup;
+			children = (
+				5E64500B1E03E89B00EC52E8 /* JetDribble */,
+				5E6450231E03E89C00EC52E8 /* JetDribbleTests */,
+				5E64500A1E03E89B00EC52E8 /* Products */,
+				AA169F667881CBE809F61687 /* Pods */,
+				41D2067C9710840D3D223F41 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5E64500A1E03E89B00EC52E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E6450091E03E89B00EC52E8 /* JetDribble.app */,
+				5E6450201E03E89C00EC52E8 /* JetDribbleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E64500B1E03E89B00EC52E8 /* JetDribble */ = {
+			isa = PBXGroup;
+			children = (
+				5E64500C1E03E89C00EC52E8 /* AppDelegate.swift */,
+				5E64500E1E03E89C00EC52E8 /* ViewController.swift */,
+				5E6450101E03E89C00EC52E8 /* Main.storyboard */,
+				5E6450161E03E89C00EC52E8 /* Assets.xcassets */,
+				5E6450181E03E89C00EC52E8 /* LaunchScreen.storyboard */,
+				5E64501B1E03E89C00EC52E8 /* Info.plist */,
+				5E6450131E03E89C00EC52E8 /* JetDribble.xcdatamodeld */,
+			);
+			path = JetDribble;
+			sourceTree = "<group>";
+		};
+		5E6450231E03E89C00EC52E8 /* JetDribbleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E6450241E03E89C00EC52E8 /* JetDribbleTests.swift */,
+				5E6450261E03E89C00EC52E8 /* Info.plist */,
+			);
+			path = JetDribbleTests;
+			sourceTree = "<group>";
+		};
+		AA169F667881CBE809F61687 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D35350A0207CCCE8FB608D9F /* Pods-JetDribble.debug.xcconfig */,
+				AE0DC4CCBC613B2003EF2C71 /* Pods-JetDribble.release.xcconfig */,
+				044CA6FB931CE79D423F33FC /* Pods-JetDribbleTests.debug.xcconfig */,
+				60A0A458D4EC7CF976A20C58 /* Pods-JetDribbleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E6450081E03E89B00EC52E8 /* JetDribble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E6450291E03E89C00EC52E8 /* Build configuration list for PBXNativeTarget "JetDribble" */;
+			buildPhases = (
+				BDF9C601560B25EC93CC0292 /* [CP] Check Pods Manifest.lock */,
+				5E6450051E03E89B00EC52E8 /* Sources */,
+				5E6450061E03E89B00EC52E8 /* Frameworks */,
+				5E6450071E03E89B00EC52E8 /* Resources */,
+				718E0FD9ED52259181597F02 /* [CP] Embed Pods Frameworks */,
+				78F47A8138330B2154C1BF87 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JetDribble;
+			productName = JetDribble;
+			productReference = 5E6450091E03E89B00EC52E8 /* JetDribble.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E64501F1E03E89C00EC52E8 /* JetDribbleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E64502C1E03E89C00EC52E8 /* Build configuration list for PBXNativeTarget "JetDribbleTests" */;
+			buildPhases = (
+				8A0B244A118E658B27B50033 /* [CP] Check Pods Manifest.lock */,
+				5E64501C1E03E89C00EC52E8 /* Sources */,
+				5E64501D1E03E89C00EC52E8 /* Frameworks */,
+				5E64501E1E03E89C00EC52E8 /* Resources */,
+				CE73EF50BF272AF3FCB1F209 /* [CP] Embed Pods Frameworks */,
+				1711AD3B2ABB15190E06BFDB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E6450221E03E89C00EC52E8 /* PBXTargetDependency */,
+			);
+			name = JetDribbleTests;
+			productName = JetDribbleTests;
+			productReference = 5E6450201E03E89C00EC52E8 /* JetDribbleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E6450011E03E89B00EC52E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Alex;
+				TargetAttributes = {
+					5E6450081E03E89B00EC52E8 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					5E64501F1E03E89C00EC52E8 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5E6450081E03E89B00EC52E8;
+					};
+				};
+			};
+			buildConfigurationList = 5E6450041E03E89B00EC52E8 /* Build configuration list for PBXProject "JetDribble" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E6450001E03E89B00EC52E8;
+			productRefGroup = 5E64500A1E03E89B00EC52E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E6450081E03E89B00EC52E8 /* JetDribble */,
+				5E64501F1E03E89C00EC52E8 /* JetDribbleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E6450071E03E89B00EC52E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E64501A1E03E89C00EC52E8 /* LaunchScreen.storyboard in Resources */,
+				5E6450171E03E89C00EC52E8 /* Assets.xcassets in Resources */,
+				5E6450121E03E89C00EC52E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E64501E1E03E89C00EC52E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1711AD3B2ABB15190E06BFDB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetDribbleTests/Pods-JetDribbleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		718E0FD9ED52259181597F02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetDribble/Pods-JetDribble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78F47A8138330B2154C1BF87 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetDribble/Pods-JetDribble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A0B244A118E658B27B50033 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF9C601560B25EC93CC0292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE73EF50BF272AF3FCB1F209 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetDribbleTests/Pods-JetDribbleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E6450051E03E89B00EC52E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E64500F1E03E89C00EC52E8 /* ViewController.swift in Sources */,
+				5E6450151E03E89C00EC52E8 /* JetDribble.xcdatamodeld in Sources */,
+				5E64500D1E03E89C00EC52E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E64501C1E03E89C00EC52E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6450251E03E89C00EC52E8 /* JetDribbleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E6450221E03E89C00EC52E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E6450081E03E89B00EC52E8 /* JetDribble */;
+			targetProxy = 5E6450211E03E89C00EC52E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E6450101E03E89C00EC52E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E6450111E03E89C00EC52E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E6450181E03E89C00EC52E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E6450191E03E89C00EC52E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E6450271E03E89C00EC52E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E6450281E03E89C00EC52E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E64502A1E03E89C00EC52E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35350A0207CCCE8FB608D9F /* Pods-JetDribble.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JetDribble/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.JetDribble;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5E64502B1E03E89C00EC52E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE0DC4CCBC613B2003EF2C71 /* Pods-JetDribble.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JetDribble/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.JetDribble;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5E64502D1E03E89C00EC52E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044CA6FB931CE79D423F33FC /* Pods-JetDribbleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JetDribbleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.JetDribbleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JetDribble.app/JetDribble";
+			};
+			name = Debug;
+		};
+		5E64502E1E03E89C00EC52E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A0A458D4EC7CF976A20C58 /* Pods-JetDribbleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JetDribbleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.JetDribbleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JetDribble.app/JetDribble";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E6450041E03E89B00EC52E8 /* Build configuration list for PBXProject "JetDribble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E6450271E03E89C00EC52E8 /* Debug */,
+				5E6450281E03E89C00EC52E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E6450291E03E89C00EC52E8 /* Build configuration list for PBXNativeTarget "JetDribble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E64502A1E03E89C00EC52E8 /* Debug */,
+				5E64502B1E03E89C00EC52E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E64502C1E03E89C00EC52E8 /* Build configuration list for PBXNativeTarget "JetDribbleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E64502D1E03E89C00EC52E8 /* Debug */,
+				5E64502E1E03E89C00EC52E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5E6450131E03E89C00EC52E8 /* JetDribble.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5E6450141E03E89C00EC52E8 /* JetDribble.xcdatamodel */,
+			);
+			currentVersion = 5E6450141E03E89C00EC52E8 /* JetDribble.xcdatamodel */;
+			path = JetDribble.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5E6450011E03E89B00EC52E8 /* Project object */;
+}

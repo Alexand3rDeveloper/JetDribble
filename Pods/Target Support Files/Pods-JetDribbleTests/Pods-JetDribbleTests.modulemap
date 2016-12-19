@@ -1,0 +1,6 @@
+framework module Pods_JetDribbleTests {
+  umbrella header "Pods-JetDribbleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
