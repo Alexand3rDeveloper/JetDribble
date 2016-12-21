@@ -4,16 +4,23 @@
 target 'JetDribble' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-     pod 'Alamofire', '~>4.2.0'
-     pod 'Realm', '~>2.1.1’
+     pod 'Alamofire'
+     pod 'RealmSwift'
 
-     pod 'SDWebImage', '~>3.8'
-     pod 'MBProgressHUD', '~>1.0'
+     pod 'SDWebImage'
+     pod 'MBProgressHUD'
   # Pods for JetDribble
 
   target 'JetDribbleTests' do
     inherit! :search_paths
+
     # Pods for testing
   end
-
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '3.0'
+      end
+    end
+  end
 end

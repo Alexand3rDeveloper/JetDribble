@@ -14,6 +14,8 @@
 		5E6450171E03E89C00EC52E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6450161E03E89C00EC52E8 /* Assets.xcassets */; };
 		5E64501A1E03E89C00EC52E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6450181E03E89C00EC52E8 /* LaunchScreen.storyboard */; };
 		5E6450251E03E89C00EC52E8 /* JetDribbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6450241E03E89C00EC52E8 /* JetDribbleTests.swift */; };
+		5E6A49AE1E09C2510098F7FA /* DribbbleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A49AD1E09C2510098F7FA /* DribbbleTableViewController.swift */; };
+		5EBBA3321E0AB39400EF4FD2 /* ShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBA3311E0AB39400EF4FD2 /* ShotCell.swift */; };
 		A60720C738130AA593A722E1 /* Pods_JetDribble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B17C4FE68E9BB6392570E2 /* Pods_JetDribble.framework */; };
 		F0F2B80EEC6D6A5028400C81 /* Pods_JetDribbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF57C2CECECBC95952DE3115 /* Pods_JetDribbleTests.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		5E6450201E03E89C00EC52E8 /* JetDribbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetDribbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6450241E03E89C00EC52E8 /* JetDribbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetDribbleTests.swift; sourceTree = "<group>"; };
 		5E6450261E03E89C00EC52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E6A49AD1E09C2510098F7FA /* DribbbleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleTableViewController.swift; sourceTree = "<group>"; };
+		5EBBA3311E0AB39400EF4FD2 /* ShotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCell.swift; sourceTree = "<group>"; };
 		60A0A458D4EC7CF976A20C58 /* Pods-JetDribbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDribbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetDribbleTests/Pods-JetDribbleTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE0DC4CCBC613B2003EF2C71 /* Pods-JetDribble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDribble.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetDribble/Pods-JetDribble.release.xcconfig"; sourceTree = "<group>"; };
 		D35350A0207CCCE8FB608D9F /* Pods-JetDribble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDribble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetDribble/Pods-JetDribble.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				5E64500C1E03E89C00EC52E8 /* AppDelegate.swift */,
 				5E64500E1E03E89C00EC52E8 /* ViewController.swift */,
+				5E6A49AD1E09C2510098F7FA /* DribbbleTableViewController.swift */,
+				5EBBA3311E0AB39400EF4FD2 /* ShotCell.swift */,
 				5E6450101E03E89C00EC52E8 /* Main.storyboard */,
 				5E6450161E03E89C00EC52E8 /* Assets.xcassets */,
 				5E6450181E03E89C00EC52E8 /* LaunchScreen.storyboard */,
@@ -335,7 +341,9 @@
 			files = (
 				5E64500F1E03E89C00EC52E8 /* ViewController.swift in Sources */,
 				5E6450151E03E89C00EC52E8 /* JetDribble.xcdatamodeld in Sources */,
+				5EBBA3321E0AB39400EF4FD2 /* ShotCell.swift in Sources */,
 				5E64500D1E03E89C00EC52E8 /* AppDelegate.swift in Sources */,
+				5E6A49AE1E09C2510098F7FA /* DribbbleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +388,7 @@
 		5E6450271E03E89C00EC52E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -430,6 +439,7 @@
 		5E6450281E03E89C00EC52E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -474,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D35350A0207CCCE8FB608D9F /* Pods-JetDribble.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JetDribble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -487,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE0DC4CCBC613B2003EF2C71 /* Pods-JetDribble.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JetDribble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

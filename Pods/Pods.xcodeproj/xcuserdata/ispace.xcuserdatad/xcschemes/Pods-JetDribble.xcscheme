@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1749B20F0BC563EB9D0D053F8338FB76"
+               BlueprintIdentifier = "1F2AD1F3E77F616A30DE88E66DB6690E"
                BuildableName = "Pods_JetDribble.framework"
                BlueprintName = "Pods-JetDribble"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1749B20F0BC563EB9D0D053F8338FB76"
+            BlueprintIdentifier = "1F2AD1F3E77F616A30DE88E66DB6690E"
             BuildableName = "Pods_JetDribble.framework"
             BlueprintName = "Pods-JetDribble"
             ReferencedContainer = "container:Pods.xcodeproj">
