@@ -8,25 +8,27 @@
 
 import UIKit
 
-import Alamofire
+//import Alamofire
 
 class DribbbleTableViewController: UITableViewController {
 
     @IBOutlet var shotsTableView: UITableView!
-//   shotCellView: UITableViewCell!
+
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let headers = ["Authorization": "Bearer ed25436f8a22c1bf3740b17362b9e1859d2e6bcff9dba2c26dbd50f6607d4774"]
-        let parametersShot = ["animated":"false"]
-        Alamofire.request("https://api.dribbble.com/v1/shots", method: .get, parameters: parametersShot, headers: headers).responseJSON{
+        
+        AlamoWrapper.requestWithClientID("https://api.dribbble.com/v1/shots", method: .get, parameters: nil).responseJSON{
             response in
-            
-            print("data is ",response.data)
-            print("response is ",response)
-            print("results are: ",response.result)
+            if let result = response.result.value {
+                print("value",response.result.value)
+                
+                let JSON = result as! NSArray
+                print("JSON ARRAY IS",JSON[0])
+            }
         }
+        
 
         
         self.refreshControl = UIRefreshControl()
