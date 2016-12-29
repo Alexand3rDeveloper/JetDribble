@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="232"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mlK-eT-Oux" id="Dac-zR-7nW">
-                                    <frame key="frameInset" width="375" height="231"/>
+                                    <frame key="frameInset" width="375" height="232"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="thO-XI-ro9">
@@ -69,9 +69,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="rrk-Dh-QEx"/>
-                    <connections>
-                        <outlet property="shotsTableView" destination="mRv-TN-BJU" id="ycf-nm-gdt"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTB-PC-vS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

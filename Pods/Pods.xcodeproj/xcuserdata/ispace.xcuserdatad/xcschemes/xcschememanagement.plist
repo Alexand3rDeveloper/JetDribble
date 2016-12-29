@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JetDribble.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,27 +47,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F2AD1F3E77F616A30DE88E66DB6690E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2A83C8790D3F95D11CAB22E43A32E325</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AEC01CD93930BB6199B28B71249DE0B</key>
+		<key>8F6448549229C7A22F82B7BD66EB9BC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84109430831033A2C26FDD01023F9E4A</key>
+		<key>9D6BAD646A0ED194573FEA0DF56C0E8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B46210D6470539826C73A53BA8CA19C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D7D13350F50E1CC1D2BBA47790DB683D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E30CA1A9FD95C1FF06C2A8847196943B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

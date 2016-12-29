@@ -9,6 +9,7 @@ target 'JetDribble' do
 
      pod 'SDWebImage'
      pod 'MBProgressHUD'
+     pod 'ObjectMapper'
   # Pods for JetDribble
 
   target 'JetDribbleTests' do

@@ -10,26 +10,16 @@ import UIKit
 
 //import Alamofire
 
-class DribbbleTableViewController: UITableViewController {
-
-    @IBOutlet var shotsTableView: UITableView!
-
- 
+class DribbbleTableViewController: UITableViewController, DataPresentable {
+    
+    private var viewModelController = ViewModelController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AlamoWrapper.requestWithClientID("https://api.dribbble.com/v1/shots", method: .get, parameters: nil).responseJSON{
-            response in
-            if let result = response.result.value {
-                print("value",response.result.value)
-                
-                let JSON = result as! NSArray
-                print("JSON ARRAY IS",JSON[0])
-            }
-        }
         
-
+        viewModelController.loadtheShots()
+        viewModelController.delegate = self
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -58,7 +48,7 @@ class DribbbleTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 6
     }
 
   
@@ -66,11 +56,14 @@ class DribbbleTableViewController: UITableViewController {
         let cell : ShotCell = tableView.dequeueReusableCell(withIdentifier: "shotCell", for: indexPath) as! ShotCell
         cell.shotTitleView.text = "bolhaya ruka"
         // Configure the cell...
-
+        print("cell for index is ", indexPath.row)
         return cell
     }
 
-
+    func dataDidfinishLoadingSuccessfully(){
+        debugPrint("DATA did finish loading hurray");
+        self.tableView.reloadData()
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

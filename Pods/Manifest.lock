@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.2.0)
   - MBProgressHUD (1.0.0)
+  - ObjectMapper (2.2.2)
   - Realm (2.1.1):
     - Realm/Headers (= 2.1.1)
   - Realm/Headers (2.1.1)
@@ -13,16 +14,18 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - MBProgressHUD
+  - ObjectMapper
   - RealmSwift
   - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   Realm: a55959c0b171a5fe5267406d17f314fec3cefaae
   RealmSwift: 749fd955bf8d6471c21d218b9389a47aaeccfe3f
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 648ed5c715c0e8996f6c70040fb6e97fa7cc4ef8
+PODFILE CHECKSUM: 02dfa71d285de220f9afba7660268e38e50557de
 
 COCOAPODS: 1.1.0.rc.2
