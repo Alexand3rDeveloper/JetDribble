@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct CellViewModel{
     var placeHolderText:String
     var textFieldText:String
     var labelText:String
     var pictureURL:String
+    
     
 }
 

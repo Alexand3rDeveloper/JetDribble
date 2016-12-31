@@ -8,9 +8,28 @@
 
 import UIKit
 import RealmSwift
+import ObjectMapper
 
-class Shot: Object {
-    dynamic var image :String?
+class Shot: Object, Mappable  {
+    
     dynamic var title = "PLACEHOLDER TITLE"
     dynamic var text = "PLACEHOLDER TEXT"
+    var animated:Bool = true
+    dynamic var imageHidpiURL:String?
+    dynamic var imageNormalURL :String?
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        self.title <- map["title"]
+        self.text <- map["description"]
+        self.animated <- map["animated"]
+        self.imageHidpiURL<-map["images.hidpi"]
+        self.imageNormalURL<-map["images.normal"]
+    }
+
+    
 }
+

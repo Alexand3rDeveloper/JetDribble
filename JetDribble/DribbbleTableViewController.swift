@@ -31,7 +31,8 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
     func refreshTheTable() {
         print("REFRESH!")
         self.refreshControl?.beginRefreshing()
-        self.refreshControl?.endRefreshing()
+        viewModelController.loadtheShots()
+//        self.refreshControl?.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,20 +49,29 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 4
     }
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : ShotCell = tableView.dequeueReusableCell(withIdentifier: "shotCell", for: indexPath) as! ShotCell
+        
+
         cell.shotTitleView.text = "bolhaya ruka"
         // Configure the cell...
+        if (viewModelController.getCellVMArrayCount()>0){
+            cell.setupCell(presenter: viewModelController.getShotVM(forIndex: indexPath.row)!)
+            debugPrint("ARRAY IS nOT EMPTY");
+        }
         print("cell for index is ", indexPath.row)
         return cell
     }
 
     func dataDidfinishLoadingSuccessfully(){
         debugPrint("DATA did finish loading hurray");
+        if (self.refreshControl?.isRefreshing)! {
+        self.refreshControl?.endRefreshing()
+        }
         self.tableView.reloadData()
     }
     /*

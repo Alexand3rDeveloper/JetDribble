@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ShotCell: UITableViewCell {
 
@@ -24,14 +25,18 @@ class ShotCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "shotCell")//reuseIdentifier)
-        self.setupCell()
+//        self.setupCell()
     }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
     
-    func setupCell(){
+    public func setupCell(presenter:CellViewModel){
+        debugPrint("presenter.pictureURL",presenter.pictureURL)
+        self.shotImageView.sd_setImage(with: URL(string: presenter.pictureURL))
+        shotDescriptionView.text = presenter.textFieldText
+        shotTitleView.text = presenter.labelText
         debugPrint("SETUP OUR CELL");
     }
     
