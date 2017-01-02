@@ -12,11 +12,11 @@ import ObjectMapper
 
 class Shot: Object, Mappable  {
     
-    dynamic var title = "PLACEHOLDER TITLE"
-    dynamic var text = "PLACEHOLDER TEXT"
+    dynamic var title:String = ""
+    dynamic var text:String = ""
     var animated:Bool = true
     dynamic var imageHidpiURL:String?
-    dynamic var imageNormalURL :String?
+    dynamic var imageNormalURL:String?
     
     required convenience init?(map: Map) {
         self.init()

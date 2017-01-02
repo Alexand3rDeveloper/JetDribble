@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 protocol DataPresentable {
-//    var something:String ? {get set}
+
     func dataDidfinishLoadingSuccessfully()
     
 }
@@ -22,9 +22,43 @@ class ViewModelController{
     var delegate:DataPresentable!
     
     init(){
-//        self.delegate
-//        arrayOfShotsVM
-        
+        self.loadFromCache()
+    }
+    
+    private func loadFromCache(){
+        do {
+            let realm = try Realm()
+            let shotObjects = realm.objects(Shot.self)
+            for singleShot in shotObjects{
+                let cellVMCellViewModel = createCellViewModel(withShot: singleShot)
+                self.arrayOfShotsVM.append(cellVMCellViewModel)
+            }
+            
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    private func saveToCache(object:Object){
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(object)
+            }
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    private func emptyCache(){
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.deleteAll()
+            }
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
     }
     
     public func loadtheShots(){
@@ -35,50 +69,35 @@ class ViewModelController{
                     print("Request failed with error: \(error)")
                     
                 case .success(let JSON):
-                  self.arrayOfShotsVM.removeAll()
-                  
-//                    do {
-//                        let realm = try Realm()
-//                        try realm.write {
-//                            realm.deleteAll()
-//                        }
-//                        
-//                    } catch let error as NSError {
-//                        fatalError(error.localizedDescription)
-//                    }
                     
-                        if let shotsJSON = JSON as? [[String: Any]] {
-                            for shotJSON in shotsJSON {
-                                guard let shot = Shot(JSON: shotJSON) else {
-                                    continue
-                                }
-                               //question is test for animation stus should be in model or in viewmodel?
-                                print("shot is ",shot)
-                                if (!shot.animated){
-                                    var imageURL:String? = shot.imageHidpiURL
-                                    if (imageURL == ""){
-                                        imageURL = shot.imageNormalURL
-                                    }
-                                    let cellVMCellViewModel = CellViewModel(placeHolderText:"",textFieldText:shot.title,labelText:shot.text,pictureURL:imageURL!)
-                                   
-                                    self.arrayOfShotsVM.append(cellVMCellViewModel)
-                                }
-//                                do {
-//                                    let realm = try Realm()
-//                                    try realm.write {
-//                                        realm.add(shot)
-//                                    }
-//                                } catch let error as NSError {
-//                                    fatalError(error.localizedDescription)
-//                                }
-                            
-                            
-                            
+                  self.arrayOfShotsVM.removeAll()
+                  self.emptyCache()
+                  
+                  if let shotsJSON = JSON as? [[String: Any]] {
+                    for shotJSON in shotsJSON {
+                        guard let shot = Shot(JSON: shotJSON) else {
+                            continue
                         }
-                        self.delegate?.dataDidfinishLoadingSuccessfully()
+                        if (!shot.animated){
+                            self.saveToCache(object: shot)
+                            let cellVMCellViewModel = self.createCellViewModel(withShot: shot)
+                            
+                            self.arrayOfShotsVM.append(cellVMCellViewModel)
+                        }
                     }
+                    self.delegate?.dataDidfinishLoadingSuccessfully()
+                }
             }
         }
+    }
+    
+    private func createCellViewModel(withShot shot:Shot)->CellViewModel{
+        var imageURL:String? = shot.imageHidpiURL
+        if (imageURL == ""){
+            imageURL = shot.imageNormalURL
+        }
+        
+        return CellViewModel(placeHolderText:"",textFieldText:shot.text,labelText:shot.title,pictureURL:imageURL!)
     }
     
     public func getShotVM(forIndex index:Int)->CellViewModel?{

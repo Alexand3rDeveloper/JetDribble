@@ -19,25 +19,29 @@ class ShotCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        debugPrint("SETUP OUR CELL");
+        
         // Initialization code
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: "shotCell")//reuseIdentifier)
-//        self.setupCell()
+        super.init(style: style, reuseIdentifier: "shotCell")
     }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
+        
+    }
+    
+    private func configTextView(){
+        self.shotDescriptionView.textContainer.maximumNumberOfLines = 2
+        self.shotDescriptionView.textContainer.lineBreakMode = .byWordWrapping
     }
     
     public func setupCell(presenter:CellViewModel){
-        debugPrint("presenter.pictureURL",presenter.pictureURL)
+        self.configTextView()
         self.shotImageView.sd_setImage(with: URL(string: presenter.pictureURL))
         shotDescriptionView.text = presenter.textFieldText
         shotTitleView.text = presenter.labelText
-        debugPrint("SETUP OUR CELL");
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
