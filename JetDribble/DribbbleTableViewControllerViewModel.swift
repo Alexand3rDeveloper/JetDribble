@@ -55,7 +55,7 @@ class DribbbleTableViewControllerViewModel{
             try realm.write {
                 realm.deleteAll()
             }
-        } catch let error as NSError {
+        } catch let error as NSError{
             fatalError(error.localizedDescription)
         }
     }
@@ -63,7 +63,7 @@ class DribbbleTableViewControllerViewModel{
     public func loadShots(){
         AlamoWrapper.makeRequest("https://api.dribbble.com/v1/shots", method: .get, parameters: nil).responseJSON{
             response in
-                switch response.result {
+                switch response.result{
                 case .failure(let error):
                     if (error._code == -1001){
                         self.delegate?.noInternetConnection()
@@ -76,9 +76,8 @@ class DribbbleTableViewControllerViewModel{
                   self.emptyCache()
                   
                   if let shotsJSON = JSON as? [[String: Any]] {
-                    for shotJSON in shotsJSON {
-                        
-                        guard let shot = Shot(JSON: shotJSON) else {
+                    for shotJSON in shotsJSON{
+                        guard let shot = Shot(JSON: shotJSON) else{
                             continue
                         }
                         if (!shot.animated){
