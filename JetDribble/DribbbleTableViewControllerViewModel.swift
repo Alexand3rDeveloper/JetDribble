@@ -15,7 +15,7 @@ protocol DataPresentable {
     func noInternetConnection()
 }
 
-class ViewModelController{
+class DribbbleTableViewControllerViewModel{
     
     var arrayOfShotsVM = [CellViewModel]()
     var delegate:DataPresentable!

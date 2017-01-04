@@ -11,7 +11,7 @@ import UIKit
 
 class DribbbleTableViewController: UITableViewController, DataPresentable {
     
-    private var viewModelController = ViewModelController()
+    private var dribbbleTableViewControllerViewModel = DribbbleTableViewControllerViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +23,13 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
         self.refreshControl?.addTarget(self, action:#selector(refreshTheTable), for: UIControlEvents.valueChanged)
         tableView.addSubview(self.refreshControl!)
         
-        viewModelController.loadShots()
-        viewModelController.delegate = self
+        dribbbleTableViewControllerViewModel.delegate = self
+        dribbbleTableViewControllerViewModel.loadShots()
     }
 
     func refreshTheTable() {
         self.refreshControl?.beginRefreshing()
-        viewModelController.loadShots()
+         dribbbleTableViewControllerViewModel.loadShots()
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,7 +46,7 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return viewModelController.getCellVMArrayCount()
+        return  dribbbleTableViewControllerViewModel.getCellVMArrayCount()
     }
 
   
@@ -54,8 +54,8 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
         let cell : ShotCell = tableView.dequeueReusableCell(withIdentifier: "shotCell", for: indexPath) as! ShotCell
         
         // Configure the cell...
-        if (viewModelController.getCellVMArrayCount()>0){
-            cell.setupCell(presenter: viewModelController.getShotVM(forIndex: indexPath.row)!)
+        if ( dribbbleTableViewControllerViewModel.getCellVMArrayCount()>0){
+            cell.setupCell(viewModel: dribbbleTableViewControllerViewModel.getShotVM(forIndex: indexPath.row)!)
         }
         return cell
     }

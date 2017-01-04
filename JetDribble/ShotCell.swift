@@ -36,11 +36,11 @@ class ShotCell: UITableViewCell {
         self.shotDescriptionView.textContainer.lineBreakMode = .byWordWrapping
     }
     
-    public func setupCell(presenter:CellViewModel){
+    public func setupCell(viewModel:CellViewModel){
         self.configTextView()
-        self.shotImageView.sd_setImage(with: URL(string: presenter.pictureURL))
-        shotDescriptionView.text = presenter.textFieldText
-        shotTitleView.text = presenter.labelText
+        self.shotImageView.sd_setImage(with: URL(string: viewModel.pictureURL))
+        shotDescriptionView.text = viewModel.textFieldText
+        shotTitleView.text = viewModel.labelText
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
