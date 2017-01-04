@@ -16,17 +16,25 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 232.0
-        tableView.rowHeight = UITableViewAutomaticDimension
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl?.addTarget(self, action:#selector(refreshTheTable), for: UIControlEvents.valueChanged)
-        tableView.addSubview(self.refreshControl!)
+        self.setupResizableCellHeight()
+        self.setupRefreshController()
         
         dribbbleTableViewControllerViewModel.delegate = self
         dribbbleTableViewControllerViewModel.loadShots()
     }
-
+    
+    private func setupResizableCellHeight() {
+        tableView.estimatedRowHeight = 232.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    private func setupRefreshController() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl?.addTarget(self, action:#selector(refreshTheTable), for: UIControlEvents.valueChanged)
+        tableView.addSubview(self.refreshControl!)
+    }
+    
     func refreshTheTable() {
         self.refreshControl?.beginRefreshing()
          dribbbleTableViewControllerViewModel.loadShots()
