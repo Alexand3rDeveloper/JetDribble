@@ -54,21 +54,21 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
         let cell : ShotCell = tableView.dequeueReusableCell(withIdentifier: "shotCell", for: indexPath) as! ShotCell
         
         // Configure the cell...
-        if ( dribbbleTableViewControllerViewModel.getCellVMArrayCount()>0){
+        if ( dribbbleTableViewControllerViewModel.getCellVMArrayCount()>0) {
             cell.setupCell(viewModel: dribbbleTableViewControllerViewModel.getShotVM(forIndex: indexPath.row)!)
         }
         return cell
     }
 
-    func dataDidfinishLoadingSuccessfully(){
-        if (self.refreshControl?.isRefreshing)!{
+    func dataDidfinishLoadingSuccessfully() {
+        if (self.refreshControl?.isRefreshing)! {
         self.refreshControl?.endRefreshing()
         }
         self.tableView.reloadData()
     }
     
-    func noInternetConnection(){
-        if (self.refreshControl?.isRefreshing)!{
+    func noInternetConnection() {
+        if (self.refreshControl?.isRefreshing)! {
             self.refreshControl?.endRefreshing()
         }
     }

@@ -26,8 +26,8 @@ class Shot: Object, Mappable  {
         self.title <- map["title"]
         self.text <- map["description"]
         self.animated <- map["animated"]
-        self.imageHidpiURL<-map["images.hidpi"]
-        self.imageNormalURL<-map["images.normal"]
+        self.imageHidpiURL <- map["images.hidpi"]
+        self.imageNormalURL <- map["images.normal"]
     }
 }
 

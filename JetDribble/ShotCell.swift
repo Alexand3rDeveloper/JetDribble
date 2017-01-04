@@ -31,12 +31,12 @@ class ShotCell: UITableViewCell {
         
     }
     
-    private func configTextView(){
+    private func configTextView() {
         self.shotDescriptionView.textContainer.maximumNumberOfLines = 2
         self.shotDescriptionView.textContainer.lineBreakMode = .byWordWrapping
     }
     
-    public func setupCell(viewModel:CellViewModel){
+    public func setupCell(viewModel:CellViewModel) {
         self.configTextView()
         self.shotImageView.sd_setImage(with: URL(string: viewModel.pictureURL))
         shotDescriptionView.text = viewModel.textFieldText

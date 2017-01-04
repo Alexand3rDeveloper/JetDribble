@@ -24,7 +24,7 @@ class DribbbleTableViewControllerViewModel{
         self.loadFromCache()
     }
     
-    private func loadFromCache(){
+    private func loadFromCache() {
         do {
             let realm = try Realm()
             let shotObjects = realm.objects(Shot.self)
@@ -38,7 +38,7 @@ class DribbbleTableViewControllerViewModel{
         }
     }
     
-    private func saveToCache(object:Object){
+    private func saveToCache(object:Object) {
         do {
             let realm = try Realm()
             try realm.write {
@@ -49,23 +49,23 @@ class DribbbleTableViewControllerViewModel{
         }
     }
     
-    private func emptyCache(){
+    private func emptyCache() {
         do {
             let realm = try Realm()
             try realm.write {
                 realm.deleteAll()
             }
-        } catch let error as NSError{
+        } catch let error as NSError {
             fatalError(error.localizedDescription)
         }
     }
     
-    public func loadShots(){
-        AlamoWrapper.makeRequest("https://api.dribbble.com/v1/shots", method: .get, parameters: nil).responseJSON{
+    public func loadShots() {
+        AlamoWrapper.makeRequest("https://api.dribbble.com/v1/shots", method: .get, parameters: nil).responseJSON {
             response in
-                switch response.result{
+                switch response.result {
                 case .failure(let error):
-                    if (error._code == -1001){
+                    if (error._code == -1001) {
                         self.delegate?.noInternetConnection()
                     }
                     print("Request failed with error: \(error)")
@@ -80,7 +80,7 @@ class DribbbleTableViewControllerViewModel{
                         guard let shot = Shot(JSON: shotJSON) else{
                             continue
                         }
-                        if (!shot.animated){
+                        if (!shot.animated) {
                             self.saveToCache(object: shot)
                             let cellVMCellViewModel = self.createCellViewModel(withShot: shot)
                             
@@ -93,7 +93,7 @@ class DribbbleTableViewControllerViewModel{
         }
     }
     
-    private func createCellViewModel(withShot shot:Shot)->CellViewModel{
+    private func createCellViewModel(withShot shot:Shot) -> CellViewModel {
         var imageURL:String? = shot.imageHidpiURL
         if (imageURL == ""){
             imageURL = shot.imageNormalURL
@@ -102,12 +102,12 @@ class DribbbleTableViewControllerViewModel{
         return CellViewModel(placeHolderText:"",textFieldText:shot.text,labelText:shot.title,pictureURL:imageURL!)
     }
     
-    public func getShotVM(forIndex index:Int)->CellViewModel?{
+    public func getShotVM(forIndex index:Int) -> CellViewModel? {
         return arrayOfShotsVM[index]
         
     }
     
-    public func getCellVMArrayCount()->Int{
+    public func getCellVMArrayCount() -> Int {
         return arrayOfShotsVM.count
     }
     
