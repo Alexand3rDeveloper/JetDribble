@@ -9,13 +9,12 @@
 import Foundation
 import RealmSwift
 
-protocol DataPresentable {
 
+protocol DataPresentable {
     func dataDidfinishLoadingSuccessfully()
-    
+    func noInternetConnection()
 }
 
-//protocol
 class ViewModelController{
     
     var arrayOfShotsVM = [CellViewModel]()
@@ -61,13 +60,16 @@ class ViewModelController{
         }
     }
     
-    public func loadtheShots(){
-        AlamoWrapper.requestWithClientID("https://api.dribbble.com/v1/shots", method: .get, parameters: nil).responseJSON{
+    public func loadShots(){
+        AlamoWrapper.makeRequest("https://api.dribbble.com/v1/shots", method: .get, parameters: nil).responseJSON{
             response in
                 switch response.result {
                 case .failure(let error):
+                    if (error._code == -1001){
+                        self.delegate?.noInternetConnection()
+                    }
                     print("Request failed with error: \(error)")
-                    
+                   
                 case .success(let JSON):
                     
                   self.arrayOfShotsVM.removeAll()
@@ -75,6 +77,7 @@ class ViewModelController{
                   
                   if let shotsJSON = JSON as? [[String: Any]] {
                     for shotJSON in shotsJSON {
+                        
                         guard let shot = Shot(JSON: shotJSON) else {
                             continue
                         }

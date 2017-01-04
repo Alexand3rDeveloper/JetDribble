@@ -8,7 +8,6 @@
 
 import UIKit
 
-//import Alamofire
 
 class DribbbleTableViewController: UITableViewController, DataPresentable {
     
@@ -17,26 +16,25 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        viewModelController.loadtheShots()
-        viewModelController.delegate = self
-        
+        tableView.estimatedRowHeight = 232.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl?.addTarget(self, action:Selector("refreshTheTable"), for: UIControlEvents.valueChanged)
-//        (self, action: "refresh:", for: UIControlEvents.valueChanged)
+        self.refreshControl?.addTarget(self, action:#selector(refreshTheTable), for: UIControlEvents.valueChanged)
         tableView.addSubview(self.refreshControl!)
+        
+        viewModelController.loadShots()
+        viewModelController.delegate = self
     }
 
     func refreshTheTable() {
         self.refreshControl?.beginRefreshing()
-        viewModelController.loadtheShots()
-//        self.refreshControl?.endRefreshing()
+        viewModelController.loadShots()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
     // MARK: - Table view data source
@@ -67,6 +65,12 @@ class DribbbleTableViewController: UITableViewController, DataPresentable {
         self.refreshControl?.endRefreshing()
         }
         self.tableView.reloadData()
+    }
+    
+    func noInternetConnection(){
+        if (self.refreshControl?.isRefreshing)! {
+            self.refreshControl?.endRefreshing()
+        }
     }
     /*
     // Override to support conditional editing of the table view.

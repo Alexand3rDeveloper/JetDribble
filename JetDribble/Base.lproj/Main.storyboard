@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,38 +12,60 @@
         <scene sceneID="Omm-Kb-Fwn">
             <objects>
                 <tableViewController id="8zB-Eg-xnm" customClass="DribbbleTableViewController" customModule="JetDribble" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="402" sectionHeaderHeight="28" sectionFooterHeight="28" id="mRv-TN-BJU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="269" sectionHeaderHeight="28" sectionFooterHeight="28" id="mRv-TN-BJU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shotCell" rowHeight="402" id="mlK-eT-Oux" customClass="ShotCell" customModule="JetDribble" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="402"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="shotCell" id="mlK-eT-Oux" customClass="ShotCell" customModule="JetDribble" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="269"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mlK-eT-Oux" id="Dac-zR-7nW">
-                                    <frame key="frameInset" width="375" height="401"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="redraw" tableViewCell="mlK-eT-Oux" id="Dac-zR-7nW">
+                                    <frame key="frameInset" width="375" height="268"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4u-3t-5R8">
-                                            <frame key="frameInset" minY="152" width="375" height="241"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V4u-3t-5R8">
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="V4u-3t-5R8" secondAttribute="height" multiplier="375:268" id="6iA-hK-0aM"/>
+                                                <constraint firstAttribute="height" constant="268" id="n3B-mn-8SE"/>
+                                            </constraints>
                                         </imageView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hq-3Q-hZx">
-                                            <frame key="frameInset" minY="84" width="375" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view alpha="0.5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQy-cR-CDB">
+                                            <frame key="frameInset" width="375" height="99"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="99" id="RX2-mT-ySA"/>
+                                            </constraints>
+                                        </view>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hq-3Q-hZx">
+                                            <frame key="frameInset" minY="29" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <bool key="isElement" value="NO"/>
+                                            </accessibility>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbF-hx-KGO">
                                             <frame key="frameInset" width="375" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="V4u-3t-5R8" secondAttribute="trailing" id="9ly-ed-Mdn"/>
+                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="leading" secondItem="Dac-zR-7nW" secondAttribute="leadingMargin" constant="8" id="Fiy-ic-aaj"/>
+                                        <constraint firstItem="V4u-3t-5R8" firstAttribute="leading" secondItem="Dac-zR-7nW" secondAttribute="leading" id="Jhk-zL-08k"/>
+                                        <constraint firstItem="V4u-3t-5R8" firstAttribute="top" secondItem="Dac-zR-7nW" secondAttribute="top" id="KVn-k1-vkA"/>
+                                        <constraint firstAttribute="bottom" secondItem="V4u-3t-5R8" secondAttribute="bottom" id="OAI-ZQ-LG4"/>
+                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="top" secondItem="V4u-3t-5R8" secondAttribute="top" id="Y1R-8j-gtr"/>
+                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="top" secondItem="Dac-zR-7nW" secondAttribute="topMargin" constant="8" id="YkY-Oq-c2d"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KQy-cR-CDB" secondAttribute="trailing" constant="8" id="sXU-bJ-dOg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="shotDescriptionView" destination="0hq-3Q-hZx" id="oMb-3z-eCO"/>

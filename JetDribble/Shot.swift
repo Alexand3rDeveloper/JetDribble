@@ -17,7 +17,7 @@ class Shot: Object, Mappable  {
     var animated:Bool = true
     dynamic var imageHidpiURL:String?
     dynamic var imageNormalURL:String?
-    
+
     required convenience init?(map: Map) {
         self.init()
     }
@@ -29,7 +29,5 @@ class Shot: Object, Mappable  {
         self.imageHidpiURL<-map["images.hidpi"]
         self.imageNormalURL<-map["images.normal"]
     }
-
-    
 }
 
