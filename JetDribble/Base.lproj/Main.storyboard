@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,11 +29,12 @@
                                                 <constraint firstAttribute="height" constant="268" id="n3B-mn-8SE"/>
                                             </constraints>
                                         </imageView>
-                                        <view alpha="0.5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQy-cR-CDB">
-                                            <frame key="frameInset" width="375" height="99"/>
+                                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQy-cR-CDB">
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="99" id="RX2-mT-ySA"/>
+                                                <constraint firstAttribute="width" constant="375" id="KFq-dy-qYV"/>
+                                                <constraint firstAttribute="width" secondItem="KQy-cR-CDB" secondAttribute="height" multiplier="125:33" id="YLK-HR-DeH"/>
+                                                <constraint firstAttribute="height" constant="99" id="ovY-Kn-FEH"/>
                                             </constraints>
                                         </view>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hq-3Q-hZx">
@@ -58,13 +58,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="V4u-3t-5R8" secondAttribute="trailing" id="9ly-ed-Mdn"/>
-                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="leading" secondItem="Dac-zR-7nW" secondAttribute="leadingMargin" constant="8" id="Fiy-ic-aaj"/>
                                         <constraint firstItem="V4u-3t-5R8" firstAttribute="leading" secondItem="Dac-zR-7nW" secondAttribute="leading" id="Jhk-zL-08k"/>
                                         <constraint firstItem="V4u-3t-5R8" firstAttribute="top" secondItem="Dac-zR-7nW" secondAttribute="top" id="KVn-k1-vkA"/>
+                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="leading" secondItem="Dac-zR-7nW" secondAttribute="leading" id="LU6-dt-mTP"/>
+                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="top" secondItem="Dac-zR-7nW" secondAttribute="top" id="Niw-kg-k47"/>
+                                        <constraint firstAttribute="trailing" secondItem="KQy-cR-CDB" secondAttribute="trailing" id="O9Z-XJ-8yS"/>
                                         <constraint firstAttribute="bottom" secondItem="V4u-3t-5R8" secondAttribute="bottom" id="OAI-ZQ-LG4"/>
-                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="top" secondItem="V4u-3t-5R8" secondAttribute="top" id="Y1R-8j-gtr"/>
-                                        <constraint firstItem="KQy-cR-CDB" firstAttribute="top" secondItem="Dac-zR-7nW" secondAttribute="topMargin" constant="8" id="YkY-Oq-c2d"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="KQy-cR-CDB" secondAttribute="trailing" constant="8" id="sXU-bJ-dOg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
